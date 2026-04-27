@@ -1,5 +1,6 @@
 async function signUp() {
 alert("SignUp clicked");
+console.log("signUp function running");
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
 
