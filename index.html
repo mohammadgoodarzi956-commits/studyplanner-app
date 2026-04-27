@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Study Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Study Planner</h1>
+
+  <div id="auth">
+    <input id="email" placeholder="Email" />
+    <input id="password" type="password" placeholder="Password" />
+    <button onclick="signUp()">Sign Up</button>
+    <button onclick="signIn()">Login</button>
+  </div>
+
+  <hr>
+
+  <div id="app" style="display:none;">
+    <h2>Your Tasks</h2>
+
+    <input id="task" placeholder="New task" />
+    <button onclick="addTask()">Add</button>
+
+    <div id="tasks"></div>
+  </div>
+
+  <script src="supabase.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
