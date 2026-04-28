@@ -1,17 +1,22 @@
-async function signUp() {
-alert("app.js loaded");
-alert("SignUp clicked");
-console.log("signUp function running");
+window.signUp = async function () {
+  alert("clicked");
+
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
 
-  await supabaseClient.auth.signUp({
+  const { data, error } = await supabaseClient.auth.signUp({
     email,
     password
   });
 
-  alert("Check email for confirmation");
-}
+  console.log(data, error);
+
+  if (error) {
+    alert(error.message);
+  } else {
+    alert("Check your email");
+  }
+};
 
 async function signIn() {
   let email = document.getElementById("email").value;
